@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Resume</title>
+
+        <link rel ="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <script type="text/javascript">
+
+        function genPDF()
+
+        {
+
+                var doc = new jsPDF();
+
+                var elementHTML = $('#table1').html();
+
+               
+
+                doc.fromHTML(elementHTML, 15, 15, {
+
+                'width': 170,
+
+                 
+
+                 });
+
+                 doc.addPage();
+
+                 var elementHTML = $('#table2').html();
+
+                
+
+                doc.fromHTML(elementHTML, 15, 15, {
+
+                'width': 170
+
+                 });
+
+                 doc.addPage();
+
+                 var elementHTML = $('#table3').html();
+
+                
+
+                doc.fromHTML(elementHTML, 15, 15, {
+
+                'width': 170
+
+
+
+                 });
+
+
+
+                doc.save('Resume.pdf');
+
+        }
+
+        </script>
+
+    
+
+    </head>
+
+    <body>
+
+
+
+  
+
+        <div id="table1">
+
+            <table  >
+
+                <p><b>PersonalDetails</b></p>
+
+
+
+                <tr>
+
+                        <td>Myself</td>
+
+                        <td>               </td>
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td>Name:</td>
+
+                    <td>p.Vamsi krishna</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Age:</td>
+
+                        <td>20</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Contactno:</td>
+
+                        <td>9550336780</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Mailid:</td>
+
+                        <td>vamsikrishna.polisetti@vitap.ac.in</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Address:</td>
+
+                        <td>4-,Gangavaram,Inkollu(M.d),Prakasam(Dt),Andhra Pradesh</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div id="table2">
+
+            <table>
+
+                    
+
+                <p><b>EducationalDetails</b></p>
+
+                <tr>
+
+                         <td>EducationalDetails</td>
+
+                        <td>               </td>
+
+                 </tr>
+
+                <tr>
+
+                        <td>B-tech>/td>
+
+                        <td>VELLORE INSTITUTE OF TECHNOLOGY,AP</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Branch</td>
+
+                        <td>COMPUTER SCIENCE ENGINEERING</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>Languages</td>
+
+                        <td>C++,JAVA,PYTHON</td>
+
+                </tr>
+
+                <tr>
+
+                        <td>OtherQualifications</td>
+
+                        <td>Knowledge on computer graphics,network security,Data anaylatics</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        
+
+        <div id="table3">
+
+                <table>
+
+                    
+
+                    <tr>
+
+                            <td>TechnicalDetails</td>
+
+                            <td>         </td>                    
+
+                    </tr>
+
+                    <tr>
+
+                            <td>Interns:</td>
+
+                            <td>attended internships at good companies improved skills in Web development,Java</td>
+
+                    </tr>
+
+                    <tr>
+
+                            <td>Projects</td>
+
+                            <td>Car rental Project in java,php,Android platforms</td>
+
+                    </tr>
+
+                    <tr>
+
+                            <td>Declaraiton</td>
+
+                            <td>I am keen to continue my career and prepared to work hard in order to achieve my organization objectives and
+
+                                    I hereby declare that the information furnished above is true to the best of my knowledge.</td>
+
+                    </tr>
+
+
+
+                </table>
+
+            </div>
+
+            <button onclick="genPDF()">Download_as_PDF</button>
+
+
+
+    </body>
+
+</html>
